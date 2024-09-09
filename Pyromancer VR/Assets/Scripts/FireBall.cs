@@ -8,9 +8,12 @@ public class FireBall : MonoBehaviour
     public float ballDamage = 10f;
     public float ballSpeed = 10f;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         StartCoroutine(SelfDestruct());
     }
 
@@ -22,6 +25,7 @@ public class FireBall : MonoBehaviour
 
     public IEnumerator Destroyed()
     {
+        audioSource.Play();
         gameObject.GetComponent<AudioSource>().Play();
         if (gameObject.transform.childCount > 0) {
             Destroy(gameObject.transform.GetChild(0).gameObject);

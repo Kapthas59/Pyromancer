@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballLife: 5
   ballDamage: 20
-  ballSpeed: 20
+  ballSpeed: 12
 --- !u!82 &7971917603971558311
 AudioSource:
   m_ObjectHideFlags: 0

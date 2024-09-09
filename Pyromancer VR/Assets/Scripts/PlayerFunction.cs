@@ -23,6 +23,7 @@ public class PlayerFunction : MonoBehaviour
     private UnityEngine.XR.InputDevice rightController;
     private UnityEngine.XR.InputDevice leftController;
     private VRRig vrRig;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class PlayerFunction : MonoBehaviour
         canTeleport = true;
         vrRig = GetComponent<VRRig>();
         unpausedPosition = XROrigin.position;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class PlayerFunction : MonoBehaviour
             {
                 if(canTeleport && joyStickValue.magnitude > 0.95 && Time.timeScale == 1)
                 {
+                    
                     StartCoroutine(Teleport(joyStickValue));
                 }
                 StartCoroutine(TeleportReload(joyStickValue));
@@ -126,6 +129,7 @@ public class PlayerFunction : MonoBehaviour
 
         NavMeshHit hit;
         if (NavMesh.SamplePosition(targetPosition, out hit, 0.1f, 1)) {
+            audioSource.Play();
             float step = teleportSpeed * Time.deltaTime;
 
             yield return new WaitForSeconds(step);
