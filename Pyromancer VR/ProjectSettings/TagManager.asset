@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerReadyAbility
+  - PlayerActivateAbility
+  - PlayerFists
+  - Enemy
+  - PlayerAbilityArea1
+  - PlayerAbilityArea2
+  - XROrigin
+  - Waypoints
+  - Enemy Shield
+  - FireBall
+  - FireStream
+  - FireWall
+  - EnemyBlade
+  - EnemyShield
+  - Enemy Blade
+  - DarkBall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - XR Origin
+  - Enemy
+  - PlayerProjectile
+  - EnemyProjectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
