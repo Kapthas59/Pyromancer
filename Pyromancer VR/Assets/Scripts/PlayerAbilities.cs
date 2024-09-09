@@ -139,7 +139,8 @@ public class PlayerAbilities : MonoBehaviour
                     audioSource.clip = fireStreamSpawn;
                     audioSource.Play();
                     var tempRotation = abilitySpawnPoint.rotation;
-                    tempRotation.eulerAngles = new Vector3(tempRotation.eulerAngles.x - 90, tempRotation.eulerAngles.y, tempRotation.eulerAngles.z);
+                    //tempRotation.eulerAngles = new Vector3(tempRotation.eulerAngles.x - 90, tempRotation.eulerAngles.y, tempRotation.eulerAngles.z);
+                    tempRotation.eulerAngles = new Vector3(tempRotation.eulerAngles.x - 90, tempRotation.eulerAngles.z, tempRotation.eulerAngles.y);
                     var fireStream = Instantiate(fireStreamPrefab, abilitySpawnPoint.position, tempRotation);
                     fireStream.transform.SetParent(transform);
                 }
